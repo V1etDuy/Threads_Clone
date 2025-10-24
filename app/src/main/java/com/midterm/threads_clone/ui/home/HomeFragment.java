@@ -1,5 +1,6 @@
 package com.midterm.threads_clone.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.midterm.threads_clone.OthersProfile;
 import com.midterm.threads_clone.R;
 import com.midterm.threads_clone.ui.home.Post;
 import com.midterm.threads_clone.ui.home.PostAdapter;
@@ -37,7 +39,11 @@ public class HomeFragment extends Fragment {
                 0, "33m", 26, 112, false));
         postList.add(new Post(R.drawable.ic_launcher_background, "zuck", "10 million sign ups in seven hours.",
                 0, "33m", 26, 112, false));
-        postAdapter = new PostAdapter(getContext(), postList);
+        postAdapter = new PostAdapter(getContext(), postList, post -> {
+            Intent intent = new Intent(getContext(), OthersProfile.class);
+            intent.putExtra("username", post.getUsername());
+            startActivity(intent);
+        });
         recyclerView.setAdapter(postAdapter);
 
         return view;
