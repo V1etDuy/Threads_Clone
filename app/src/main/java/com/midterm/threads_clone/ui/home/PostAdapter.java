@@ -15,10 +15,16 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
     private Context context;
     private List<Post> postList;
+    private OnProfileClickListener listener;
 
-    public PostAdapter(Context context, List<Post> postList) {
+    public interface OnProfileClickListener {
+        void onProfileClick(Post post);
+    }
+
+    public PostAdapter(Context context, List<Post> postList, OnProfileClickListener listener) {
         this.context = context;
         this.postList = postList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -42,6 +48,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         } else {
             holder.image.setVisibility(View.GONE);
         }
+
+        if (listener != null) {
+            View.OnClickListener profileClickListener = v -> listener.onProfileClick(post);
+            holder.avatar.setOnClickListener(profileClickListener);
+            holder.username.setOnClickListener(profileClickListener);
+        }
+
     }
 
     @Override
