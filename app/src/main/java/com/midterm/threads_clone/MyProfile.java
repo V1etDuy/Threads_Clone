@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -13,7 +14,7 @@ import com.midterm.threads_clone.ui.home.PostAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OthersProfile extends AppCompatActivity {
+public class MyProfile extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private PostAdapter postAdapter;
@@ -22,7 +23,7 @@ public class OthersProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_others_profile);
+        setContentView(R.layout.activity_my_profile);
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -35,6 +36,7 @@ public class OthersProfile extends AppCompatActivity {
 
         postAdapter = new PostAdapter(this, postList, null);
         recyclerView.setAdapter(postAdapter);
-    }
 
+
+    }
 }
