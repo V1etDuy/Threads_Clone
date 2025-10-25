@@ -81,28 +81,17 @@
             </LinearLayout>
 
 
-            <!-- Nút Follow -->
+            <!-- Nút Edit -->
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnFollow"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_btn_gradient"
-                android:text="Follow"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:visibility="visible"/>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnFollowed"
+                android:id="@+id/btnEditProfile"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/bg_btn_followed"
-                android:text="Followed"
+                android:text="Edit profile"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="16sp"
-                android:visibility="gone"/>
+                android:textSize="16sp" />
+
 
             <!-- Tabs Threads / Replies -->
             <LinearLayout
