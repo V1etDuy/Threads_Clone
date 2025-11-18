@@ -92,6 +92,41 @@
                 android:textColor="@android:color/white"
                 android:textColorHint="#B3FFFFFF"/>
 
+            <TextView
+                android:id="@+id/tvErrorEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Invalid email"
+                android:textColor="#FF3B30"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Username"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF"/>
+
+            <TextView
+                android:id="@+id/tvErrorUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username must be at least 6 letters"
+                android:textColor="#FF3B30"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+
+
             <EditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
@@ -106,8 +141,18 @@
                 android:textColor="@android:color/white"
                 android:textColorHint="#B3FFFFFF"/>
 
+            <TextView
+                android:id="@+id/tvErrorPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password must be at least 8 letters"
+                android:textColor="#FF3B30"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="20dp"
@@ -128,6 +173,7 @@
                     android:textSize="16sp"
                     android:textColor="#7F7F7F"/>
                 <TextView
+                    android:id="@+id/tvSignIn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sign in"
