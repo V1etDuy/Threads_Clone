@@ -76,17 +76,17 @@
         app:layout_constraintVertical_bias="0.5"
         android:background="@drawable/bg_edittext">
 
-    <LinearLayout
+        <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name"
-            android:textColor="@android:color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@android:color/white"/>
 
             <!-- Avatar + Name -->
             <LinearLayout
@@ -115,19 +115,19 @@
                     android:layout_marginStart="16dp" />
 
             </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bio"
-            android:textColor="@android:color/white"/>
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="+ Write bio"
-            android:textColor="@android:color/white"
-            android:textColorHint="#AAAAAA"
-            android:paddingBottom="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bio"
+                android:textColor="@android:color/white"/>
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="+ Write bio"
+                android:textColor="@android:color/white"
+                android:textColorHint="#AAAAAA"
+                android:paddingBottom="15dp"/>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

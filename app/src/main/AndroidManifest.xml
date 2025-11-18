@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,7 +13,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Threads_Clone"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".PostRegister"
+            android:exported="false" />
+        <activity
+            android:name=".VerifyEmailActivity"
+            android:exported="true"
+            android:label="@string/title_activity_verify_email"
+            android:theme="@style/Theme.Threads_Clone">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- MATCH LINK: http://empty/confirm-signup?token=xxx -->
+                <data
+                    android:host="empty"
+                    android:pathPrefix="/confirm-signup"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NewThread"
+            android:exported="false" />
         <activity
             android:name=".EditProfile"
             android:exported="false" />
@@ -23,13 +50,7 @@
             android:exported="false" />
         <activity
             android:name=".MainPage"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".ForgotPasswordCode"
             android:exported="false" />
@@ -41,7 +62,13 @@
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="false" />
